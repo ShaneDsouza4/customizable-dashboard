@@ -31,11 +31,11 @@ export class CustomSidenavComponent {
       label: 'Dashboard',
       route: 'dashboard'
     },
-    // {
-    //   icon: 'home',
-    //   label: 'Expenses',
-    //   route: ''
-    // }
+    {
+      icon: 'money',
+      label: 'Expenses',
+      route: 'expenses'
+    }
   ])
 
   profilePicSize = computed(() => this.sideNavCollapsed() ? '32' : '100')
