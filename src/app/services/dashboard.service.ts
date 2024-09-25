@@ -12,7 +12,7 @@ export class DashboardService {
   widgets = signal<Widget[]>([
     {
       id: 1,
-      label: 'Subscribers',
+      label: 'Total Budget',
       content: SubscribersComponent,
       rows: 1,
       columns: 1,
@@ -21,7 +21,7 @@ export class DashboardService {
     },
     {
       id: 2,
-      label: 'Views',
+      label: 'Expenses This Month',
       content: ViewsComponent,
       rows: 1,
       columns: 1,
@@ -30,7 +30,7 @@ export class DashboardService {
     },
     {
       id: 3,
-      label: 'Watch Time',
+      label: 'Remaining Budget',
       content: WatchTimeComponent,
       rows: 1,
       columns: 1,
@@ -39,7 +39,7 @@ export class DashboardService {
     },
     {
       id: 4,
-      label: 'Revenue',
+      label: 'Largest Expense Category',
       content: RevenueComponent,
       rows: 1,
       columns: 1,
