@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { CustomSidenavComponent } from './components/custom-sidenav/custom-sidenav.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ import { CustomSidenavComponent } from './components/custom-sidenav/custom-siden
     MatIconModule,
     MatSidenavModule,
     DashboardComponent,
-    CustomSidenavComponent
+    CustomSidenavComponent,
+    DragDropModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

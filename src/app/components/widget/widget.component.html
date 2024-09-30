@@ -1,5 +1,5 @@
 <div class="container mat-elevation-z3" [style.background-color]="data().backgroundColor ?? 'white'"
-    [style.color]="data().color ?? 'inherit'">
+    [style.color]="data().color ?? 'inherit'" cdkDrag cdkDragPreviewContainer="parent" style="cursor:move;">
     <!-- <h3 class="m-0">{{data().label}}</h3> -->
 
     <button mat-icon-button class="settings-button" (click)="showOptions.set(true)"
@@ -12,5 +12,8 @@
     <!-- <app-widget-options [(showOptions)]="showOptions"></app-widget-options> -->
     <app-widget-options [(showOptions)]="showOptions" [data]="data()" />
     }
+
+    <!-- Keep placeholder empty to avoid displacement -->
+    <div *cdkDragPlaceholder></div>
 
 </div>

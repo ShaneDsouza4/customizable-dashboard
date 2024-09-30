@@ -135,4 +135,31 @@ export class DashboardService {
     localStorage.setItem('dashboardWidgets', JSON.stringify(widgetsWithoutContent))
 
   })
+
+  updateWidgetPosition(sourceWidgetId: number, targetWidgetId: number) {
+    const sourceIndex = this.addedWidgets().findIndex(
+      (w) => w.id === sourceWidgetId
+    );
+
+    if (sourceIndex === -1) {
+      return;
+    }
+
+    const newWidgets = [...this.addedWidgets()];
+    const sourceWidget = newWidgets.splice(sourceIndex, 1)[0];
+
+    const targerIndex = newWidgets.findIndex((w) => w.id == targetWidgetId);
+    if (targerIndex == 1) {
+      return;
+    }
+
+    const insertAt = targerIndex == sourceIndex ? targerIndex + 1 : targerIndex;
+
+
+
+    //Insert source widget, in target index positon
+    newWidgets.splice(insertAt, 0, sourceWidget)
+    this.addedWidgets.set(newWidgets)
+
+  }
 }
