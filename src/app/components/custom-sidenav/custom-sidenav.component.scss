@@ -34,7 +34,7 @@
 }
 
 .menu-item{
-
+    
     border-left: 5px solid;
     border-left-color: rgba(0,0,0,0);
 }
@@ -42,4 +42,14 @@
 .selected-menu-item{
     border-left-color: #B61B1B;
     background: rgba(0,0,0,0.05);
+
+    .mat-icon {
+        color: #B61B1B; 
+    }
+
+    .menu-label {
+        color: #B61B1B !important; 
+    }
 }
+
+

@@ -8,6 +8,7 @@ export type MenuItem = {
   icon: string;
   label: string;
   route: string;
+  color?: string;
 }
 
 
@@ -29,12 +30,14 @@ export class CustomSidenavComponent {
     {
       icon: 'dashboard',
       label: 'Dashboard',
-      route: 'dashboard'
+      route: 'dashboard',
+      color: 'red'
     },
     {
       icon: 'money',
       label: 'Expenses',
-      route: 'expenses'
+      route: 'expenses',
+      color: 'red'
     }
   ])
 
